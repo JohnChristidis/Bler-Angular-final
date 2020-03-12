@@ -1,0 +1,33 @@
+<div>
+  <h2>Add new Permission</h2>
+  <form #userForm="ngForm" (ngSubmit)="addPermission()" novalidate>
+    {{ userForm.value | json}}<br>
+    {{ newPermissionModel | json}}
+  <div>
+      <span>Add company's name: </span>
+      <input type="text" name="companyname" [(ngModel)]="newPermissionModel.companyname">
+  </div>
+  <div>
+      <span>Add company's ID: </span>
+      <input type="text" name="companyID" [(ngModel)]="newPermissionModel.companyID">
+  </div>
+  <div>
+      <span>Add company's passcode: </span>
+      <input type="text" name="passcode" [(ngModel)]="newPermissionModel.passcode">
+  </div>
+  <div>
+      <span>Add your id: </span>
+      <input type="text" name="id" [(ngModel)]="newPermissionModel.id">
+  </div>
+  <div>
+      <span>Add your username: </span>
+      <input type="text" name="username" [(ngModel)]="newPermissionModel.username">
+  </div>
+
+
+  <button type="submit" name="button">Add Permission</button>
+  </form>
+
+
+
+</div>

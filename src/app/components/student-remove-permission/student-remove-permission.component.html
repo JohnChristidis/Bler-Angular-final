@@ -1,0 +1,25 @@
+<div>
+  <h2>Remove Permission</h2>
+  <form #userForm="ngForm" (ngSubmit)="removePermission()" novalidate>
+    {{ userForm.value | json}}<br>
+    {{ oldPermissionModel | json}}
+  <div>
+      <span>Add company's name: </span>
+      <input type="text" name="companyname" [(ngModel)]="oldPermissionModel.companyname">
+  </div>
+  <div>
+      <span>Add your id: </span>
+      <input type="text" name="id" [(ngModel)]="oldPermissionModel.id">
+  </div>
+  <div>
+      <span>Add your username: </span>
+      <input type="text" name="user" [(ngModel)]="oldPermissionModel.user">
+  </div>
+
+
+  <button type="submit" name="button">Remove Permission</button>
+  </form>
+
+
+
+</div>
